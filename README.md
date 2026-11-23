@@ -5,13 +5,15 @@
 We answer yes to Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37; journal version, p. 1280): for every finite group G, H ≤ G and N normal in G, P_G(H) ≤ P_G(HN). Equality holds exactly when N ≤ H or H is normal in G. The same criterion with N = ker f characterizes equality in the homomorphism inequality (5.1). The note also proves the coprime-order assertion in Problem 5.3 and supplies a finite-quotient probability model for the finite-index setting in Problem 5.4.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24410085](https://doi.org/10.5281/zenodo.24410085)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24410084](https://doi.org/10.5281/zenodo.24410084)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [alm2024-normal-extension-monotonicity](https://mathesis-omega-research.apps.chrono-ai.fun/papers/alm2024-normal-extension-monotonicity?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Normal-extension monotonicity: Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37). Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/alm2024-normal-extension-monotonicity?version=2
+Haobo Ma, Wenlin Zhang (2026). Normal-extension monotonicity: Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37). Mathesis, version 2. https://doi.org/10.5281/zenodo.24410085
 
 ## Statement progress
 
