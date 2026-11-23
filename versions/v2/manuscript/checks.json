@@ -1,0 +1,432 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "group": "C1",
+      "order": 1,
+      "subgroups": 1,
+      "normal_subgroups": 1,
+      "subgroup_normal_pairs": 1,
+      "strict_inequalities": 0,
+      "equalities": 1,
+      "component_surjections": 1,
+      "quotient_identities": 1,
+      "enumerated_transversals": 1
+    },
+    {
+      "group": "C2",
+      "order": 2,
+      "subgroups": 2,
+      "normal_subgroups": 2,
+      "subgroup_normal_pairs": 4,
+      "strict_inequalities": 0,
+      "equalities": 4,
+      "component_surjections": 6,
+      "quotient_identities": 3,
+      "enumerated_transversals": 3
+    },
+    {
+      "group": "C3",
+      "order": 3,
+      "subgroups": 2,
+      "normal_subgroups": 2,
+      "subgroup_normal_pairs": 4,
+      "strict_inequalities": 0,
+      "equalities": 4,
+      "component_surjections": 8,
+      "quotient_identities": 3,
+      "enumerated_transversals": 4
+    },
+    {
+      "group": "C4",
+      "order": 4,
+      "subgroups": 3,
+      "normal_subgroups": 3,
+      "subgroup_normal_pairs": 9,
+      "strict_inequalities": 0,
+      "equalities": 9,
+      "component_surjections": 21,
+      "quotient_identities": 6,
+      "enumerated_transversals": 9
+    },
+    {
+      "group": "C5",
+      "order": 5,
+      "subgroups": 2,
+      "normal_subgroups": 2,
+      "subgroup_normal_pairs": 4,
+      "strict_inequalities": 0,
+      "equalities": 4,
+      "component_surjections": 12,
+      "quotient_identities": 3,
+      "enumerated_transversals": 6
+    },
+    {
+      "group": "C6",
+      "order": 6,
+      "subgroups": 4,
+      "normal_subgroups": 4,
+      "subgroup_normal_pairs": 16,
+      "strict_inequalities": 0,
+      "equalities": 16,
+      "component_surjections": 48,
+      "quotient_identities": 9,
+      "enumerated_transversals": 24
+    },
+    {
+      "group": "C8",
+      "order": 8,
+      "subgroups": 4,
+      "normal_subgroups": 4,
+      "subgroup_normal_pairs": 16,
+      "strict_inequalities": 0,
+      "equalities": 16,
+      "component_surjections": 60,
+      "quotient_identities": 10,
+      "enumerated_transversals": 41
+    },
+    {
+      "group": "C12",
+      "order": 12,
+      "subgroups": 6,
+      "normal_subgroups": 6,
+      "subgroup_normal_pairs": 36,
+      "strict_inequalities": 0,
+      "equalities": 36,
+      "component_surjections": 168,
+      "quotient_identities": 18,
+      "enumerated_transversals": 258
+    },
+    {
+      "group": "C24",
+      "order": 24,
+      "subgroups": 8,
+      "normal_subgroups": 8,
+      "subgroup_normal_pairs": 64,
+      "strict_inequalities": 0,
+      "equalities": 64,
+      "component_surjections": 480,
+      "quotient_identities": 30,
+      "enumerated_transversals": 16730
+    },
+    {
+      "group": "D6",
+      "order": 6,
+      "subgroups": 6,
+      "normal_subgroups": 3,
+      "subgroup_normal_pairs": 18,
+      "strict_inequalities": 6,
+      "equalities": 12,
+      "component_surjections": 45,
+      "quotient_identities": 9,
+      "enumerated_transversals": 40
+    },
+    {
+      "group": "D8",
+      "order": 8,
+      "subgroups": 10,
+      "normal_subgroups": 6,
+      "subgroup_normal_pairs": 60,
+      "strict_inequalities": 20,
+      "equalities": 40,
+      "component_surjections": 186,
+      "quotient_identities": 22,
+      "enumerated_transversals": 137
+    },
+    {
+      "group": "D10",
+      "order": 10,
+      "subgroups": 8,
+      "normal_subgroups": 3,
+      "subgroup_normal_pairs": 24,
+      "strict_inequalities": 10,
+      "equalities": 14,
+      "component_surjections": 84,
+      "quotient_identities": 11,
+      "enumerated_transversals": 196
+    },
+    {
+      "group": "D12",
+      "order": 12,
+      "subgroups": 16,
+      "normal_subgroups": 7,
+      "subgroup_normal_pairs": 112,
+      "strict_inequalities": 51,
+      "equalities": 61,
+      "component_surjections": 413,
+      "quotient_identities": 34,
+      "enumerated_transversals": 842
+    },
+    {
+      "group": "D16",
+      "order": 16,
+      "subgroups": 19,
+      "normal_subgroups": 7,
+      "subgroup_normal_pairs": 133,
+      "strict_inequalities": 68,
+      "equalities": 65,
+      "component_surjections": 609,
+      "quotient_identities": 41,
+      "enumerated_transversals": 3793
+    },
+    {
+      "group": "D20",
+      "order": 20,
+      "subgroups": 22,
+      "normal_subgroups": 7,
+      "subgroup_normal_pairs": 154,
+      "strict_inequalities": 85,
+      "equalities": 69,
+      "component_surjections": 812,
+      "quotient_identities": 42,
+      "enumerated_transversals": 17330
+    },
+    {
+      "group": "D24",
+      "order": 24,
+      "subgroups": 34,
+      "normal_subgroups": 9,
+      "subgroup_normal_pairs": 306,
+      "strict_inequalities": 184,
+      "equalities": 122,
+      "component_surjections": 1683,
+      "quotient_identities": 78,
+      "enumerated_transversals": 96954
+    },
+    {
+      "group": "Q8",
+      "order": 8,
+      "subgroups": 6,
+      "normal_subgroups": 6,
+      "subgroup_normal_pairs": 36,
+      "strict_inequalities": 0,
+      "equalities": 36,
+      "component_surjections": 114,
+      "quotient_identities": 18,
+      "enumerated_transversals": 73
+    },
+    {
+      "group": "A4",
+      "order": 12,
+      "subgroups": 10,
+      "normal_subgroups": 3,
+      "subgroup_normal_pairs": 30,
+      "strict_inequalities": 14,
+      "equalities": 16,
+      "component_surjections": 108,
+      "quotient_identities": 13,
+      "enumerated_transversals": 593
+    },
+    {
+      "group": "S4",
+      "order": 24,
+      "subgroups": 30,
+      "normal_subgroups": 4,
+      "subgroup_normal_pairs": 120,
+      "strict_inequalities": 75,
+      "equalities": 45,
+      "component_surjections": 588,
+      "quotient_identities": 39,
+      "enumerated_transversals": 98669
+    },
+    {
+      "group": "C2xC2",
+      "order": 4,
+      "subgroups": 5,
+      "normal_subgroups": 5,
+      "subgroup_normal_pairs": 25,
+      "strict_inequalities": 0,
+      "equalities": 25,
+      "component_surjections": 55,
+      "quotient_identities": 12,
+      "enumerated_transversals": 17
+    },
+    {
+      "group": "C2xC2xC2",
+      "order": 8,
+      "subgroups": 16,
+      "normal_subgroups": 16,
+      "subgroup_normal_pairs": 256,
+      "strict_inequalities": 0,
+      "equalities": 256,
+      "component_surjections": 816,
+      "quotient_identities": 66,
+      "enumerated_transversals": 233
+    },
+    {
+      "group": "C3xC3",
+      "order": 9,
+      "subgroups": 6,
+      "normal_subgroups": 6,
+      "subgroup_normal_pairs": 36,
+      "strict_inequalities": 0,
+      "equalities": 36,
+      "component_surjections": 132,
+      "quotient_identities": 15,
+      "enumerated_transversals": 118
+    },
+    {
+      "group": "C2xC4",
+      "order": 8,
+      "subgroups": 8,
+      "normal_subgroups": 8,
+      "subgroup_normal_pairs": 64,
+      "strict_inequalities": 0,
+      "equalities": 64,
+      "component_surjections": 216,
+      "quotient_identities": 26,
+      "enumerated_transversals": 105
+    },
+    {
+      "group": "C2xC6",
+      "order": 12,
+      "subgroups": 10,
+      "normal_subgroups": 10,
+      "subgroup_normal_pairs": 100,
+      "strict_inequalities": 0,
+      "equalities": 100,
+      "component_surjections": 440,
+      "quotient_identities": 36,
+      "enumerated_transversals": 458
+    }
+  ],
+  "totals": {
+    "subgroups": 238,
+    "normal_subgroups": 132,
+    "subgroup_normal_pairs": 1628,
+    "strict_inequalities": 513,
+    "equalities": 1115,
+    "component_surjections": 7105,
+    "quotient_identities": 545,
+    "enumerated_transversals": 236634
+  },
+  "weight_recurrence_range": [
+    1,
+    99
+  ],
+  "grid_weight_range": {
+    "first": [
+      1,
+      24
+    ],
+    "second": [
+      1,
+      24
+    ],
+    "pairs": 576
+  },
+  "direct_products": [
+    {
+      "group": "C1xC1",
+      "order": 1,
+      "subgroups": 1,
+      "rectangular_checks": 1,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C1xC2",
+      "order": 2,
+      "subgroups": 2,
+      "rectangular_checks": 2,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C1xC3",
+      "order": 3,
+      "subgroups": 2,
+      "rectangular_checks": 2,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C1xC5",
+      "order": 5,
+      "subgroups": 2,
+      "rectangular_checks": 2,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C1xS3",
+      "order": 6,
+      "subgroups": 6,
+      "rectangular_checks": 6,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1/2"
+    },
+    {
+      "group": "C1xD8",
+      "order": 8,
+      "subgroups": 10,
+      "rectangular_checks": 10,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1/2"
+    },
+    {
+      "group": "C2xC3",
+      "order": 6,
+      "subgroups": 4,
+      "rectangular_checks": 4,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C2xC5",
+      "order": 10,
+      "subgroups": 4,
+      "rectangular_checks": 4,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C3xC5",
+      "order": 15,
+      "subgroups": 4,
+      "rectangular_checks": 4,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1"
+    },
+    {
+      "group": "C3xD8",
+      "order": 24,
+      "subgroups": 20,
+      "rectangular_checks": 20,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1/8"
+    },
+    {
+      "group": "C5xS3",
+      "order": 30,
+      "subgroups": 12,
+      "rectangular_checks": 12,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1/32"
+    },
+    {
+      "group": "C5xD8",
+      "order": 40,
+      "subgroups": 20,
+      "rectangular_checks": 20,
+      "coprime_minimum_identity": true,
+      "minimum_probability": "1/32"
+    },
+    {
+      "group": "S3xS3",
+      "order": 36,
+      "subgroups": 60,
+      "rectangular_checks": 36,
+      "coprime_minimum_identity": false,
+      "minimum_probability": "1/256"
+    }
+  ],
+  "structural_equality_checks": 1628,
+  "homomorphism_inequality_and_equality_checks": 1628,
+  "S3_subgroup_chain_probabilities": [
+    "1",
+    "1/2",
+    "1"
+  ],
+  "scope": "Exact finite checks of transversal counts, normal-extension inequalities, double-coset and structural equality criteria, homomorphism consequences, quotient identities, grid weights and direct-product bounds for the listed groups."
+}

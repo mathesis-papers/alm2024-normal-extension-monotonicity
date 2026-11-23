@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 90219,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "44a8335c93797e59d546bcf66b06be31c67d8bba70a2ebbddf0ecd64ea0bbf6f",
+      "sha256": "44a8335c93797e59d546bcf66b06be31c67d8bba70a2ebbddf0ecd64ea0bbf6f"
+    },
+    "source": {
+      "bytes": 14905,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "37757f4a1e5642c58d26948ee4115ded5660c25baa4919d162e5b007b211671a",
+      "sha256": "37757f4a1e5642c58d26948ee4115ded5660c25baa4919d162e5b007b211671a"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We answer yes to Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37; journal version, p. 1280): for every finite group G, H ≤ G and N normal in G, P_G(H) ≤ P_G(HN). Equality holds exactly when N ≤ H or H is normal in G. The same criterion with N = ker f characterizes equality in the homomorphism inequality (5.1). The note also proves the coprime-order assertion in Problem 5.3 and supplies a finite-quotient probability model for the finite-index setting in Problem 5.4.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "13f4288c2940bd2aa4020cec789956b9265769f5",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/13f4288c2940bd2aa4020cec789956b9265769f5/D5/S3/FiniteGroups/TransversalProbabilityMonotone.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 90219,
+      "sha256": "44a8335c93797e59d546bcf66b06be31c67d8bba70a2ebbddf0ecd64ea0bbf6f",
+      "url": "/api/v1/collected-papers/alm2024-normal-extension-monotonicity/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T03:23:32.436932918Z",
+    "record": "alm2024-normal-extension-monotonicity",
+    "repository_name": "alm2024-normal-extension-monotonicity",
+    "source": {
+      "bytes": 14905,
+      "sha256": "37757f4a1e5642c58d26948ee4115ded5660c25baa4919d162e5b007b211671a",
+      "url": "/api/v1/collected-papers/alm2024-normal-extension-monotonicity/files/source?version=2"
+    },
+    "title": "Normal-extension monotonicity: Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37)",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T03:23:32.436932918Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "alm2024-normal-extension-monotonicity"
+  }
+}

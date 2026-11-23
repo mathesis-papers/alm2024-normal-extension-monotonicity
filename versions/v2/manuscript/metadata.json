@@ -1,0 +1,15 @@
+{
+  "id": "alm2024-normal-extension-monotonicity",
+  "revision": 2,
+  "problem_ids": ["alm2024"],
+  "topic": "Aivazidis–Loukaki–Müller, arXiv:2209.00986v2, Problem 5.2, p. 37: normal extensions, equality and related questions",
+  "title": "Normal-extension monotonicity: Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37)",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We answer yes to Problem 5.2 of Aivazidis, Loukaki and Müller (arXiv:2209.00986v2, p. 37; journal version, p. 1280): for every finite group G, H ≤ G and N normal in G, P_G(H) ≤ P_G(HN). Equality holds exactly when N ≤ H or H is normal in G. The same criterion with N = ker f characterizes equality in the homomorphism inequality (5.1). The note also proves the coprime-order assertion in Problem 5.3 and supplies a finite-quotient probability model for the finite-index setting in Problem 5.4.",
+  "summary": "A complete double-coset proof with structural equality, homomorphism consequences, coprime direct products, finite-index quotients and exact finite checks.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/13f4288c2940bd2aa4020cec789956b9265769f5/D5/S3/FiniteGroups/TransversalProbabilityMonotone.lean"
+}

@@ -1,0 +1,384 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,array,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\usepackage{xurl}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\PP}{P}
+\newcommand{\DD}{\mathcal D}
+\title{Normal-extension monotonicity:\protect\\
+Problem 5.2 of Aivazidis, Loukaki and M\"uller\protect\\
+(arXiv:2209.00986v2, p.~37)}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{November 11, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We answer yes to Problem 5.2 of Aivazidis,
+Loukaki and M\"uller (arXiv:2209.00986v2, p.~37; journal version, p.~1280):
+if $G$ is finite, $H\leq G$ and $N\trianglelefteq G$, then
+$\PP_G(H)\leq\PP_G(HN)$. The double-coset counting formula of those authors
+reduces the proof to a surjection between coset orbits and the strict decrease
+of $t!/t^t$ for positive integers $t$. Equality holds precisely when
+$N\leq H$ or $H\trianglelefteq G$, which also characterizes equality in their
+homomorphism inequality (5.1). We prove the coprime-order assertion in
+Problem 5.3 and give a finite-quotient probability model for Problem 5.4.
+\end{abstract}
+
+\section{The probability and its factors}
+Aivazidis, Loukaki and M\"uller ask whether adjoining a normal subgroup always
+increases the probability that a left transversal is also a right transversal
+\cite[Problem 5.2]{ALM}. Theorem~\ref{thm:main} answers this affirmatively for
+every finite group. We use their normalization throughout: if $H\leq G$ and
+$n=[G:H]$, write $\mathrm{DT}_G(H)$ for the collection of subsets of $G$
+meeting every left coset $gH$ and every right coset $Hg$ exactly once, and set
+\begin{equation}\label{eq:definition}
+ \PP_G(H)=\frac{|\mathrm{DT}_G(H)|}{|H|^n}.
+\end{equation}
+There are $|H|^n$ left transversals, so this is precisely the proportion that
+are two-sided. It is attached to a specified subgroup, rather than the
+minimum $\operatorname{tp}(G)=\min_{U\leq G}\PP_G(U)$.
+
+Let $\DD_H=H\backslash G/H$. For $d=HgH\in\DD_H$, let
+\[
+ t_H(d)=|d|/|H|=[H:H\cap gHg^{-1}].
+\]
+This positive integer counts the left cosets of $H$ in $d$; it also counts
+the right cosets. The corresponding coset-intersection graph consists of
+complete bipartite components, as described by Button, Chiodo and
+Zeron-Medina Laris \cite[Theorem 3 and Proposition 6]{BCZ}.
+The following is the specialization $K=H$ of
+\cite[Proposition 3.2]{ALM}. We include its counting argument to make the
+normalization explicit.
+
+\begin{lemma}\label{lem:count}
+For every subgroup $H$ of a finite group $G$,
+\begin{equation}\label{eq:product}
+ \PP_G(H)=\prod_{d\in\DD_H}a(t_H(d)),\qquad
+ a(t)=\frac{t!}{t^t}\quad(t\geq1).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix $d=HgH$ and put $t=t_H(d)$. Every left coset in $d$ intersects every
+right coset in $d$. Indeed, a left coset has the form $hgH$ and a right coset
+has the form $Hgk$ with $h,k\in H$, and $hgk$ lies in their intersection.
+If $z$ is in such an intersection, the intersection is
+$z(H\cap z^{-1}Hz)$, of cardinality $|H\cap z^{-1}Hz|=|H|/t$.
+The last equality follows from $z\in HgH$ and the double-coset cardinality
+formula, or from partitioning a left coset into its $t$ equal intersection
+cells. Thus the intersections form a $t$ by $t$ array of cells, each of size
+$|H|/t$.
+
+A two-sided transversal within $d$ chooses a bijection from its left cosets
+to its right cosets, and then one group element in each of the $t$ matched
+cells. There are exactly $t!(|H|/t)^t$ such subsets. Conversely, each such
+subset determines that bijection and those choices uniquely; no ordering of
+the subset is counted. Choices in distinct double cosets are independent,
+and $\sum_d t_H(d)=[G:H]$. Multiplying these counts and dividing by the
+denominator in \eqref{eq:definition} gives \eqref{eq:product}.
+\end{proof}
+
+For positive integers $t$,
+\begin{equation}\label{eq:weights}
+ 0<a(t)\leq1,\qquad a(1)=1,\qquad
+ \frac{a(t+1)}{a(t)}=\left(\frac{t}{t+1}\right)^t<1.
+\end{equation}
+In particular, $a(t)=1$ exactly when $t=1$.
+
+\section{Normal extensions and equality}
+Put $L=HN$. Normality of $N$ ensures that $L$ is a subgroup. There is a
+natural surjection
+\[
+ \phi:\DD_H\longrightarrow\DD_L,\qquad HgH\longmapsto LgL.
+\]
+The key point is that normality gives a surjection within each component,
+not just between the sets of components.
+
+\begin{lemma}\label{lem:orbit}
+For $d\in\DD_H$, the map $xH\mapsto xL$ from the left cosets in $d$ onto
+the left cosets in $\phi(d)$ is surjective. Consequently,
+$t_H(d)\geq t_L(\phi(d))$.
+\end{lemma}
+\begin{proof}
+Choose $g$ with $d=HgH$. A left coset in $LgL$ has the form $\ell gL$,
+where $\ell\in L$. Write $\ell=hn$ with $h\in H$ and $n\in N$. Since
+$g^{-1}ng\in N\leq L$, we have
+\[
+ \ell gL=hngL=hg(g^{-1}ng)L=hgL.
+\]
+This is the image of $hgH$, which belongs to $HgH$. The map is well-defined
+because $H\leq L$. Counting its domain and range proves the inequality.
+\end{proof}
+
+\begin{theorem}\label{thm:main}
+Let $G$ be finite, $H\leq G$ and $N\trianglelefteq G$. Then
+\[
+ \PP_G(H)\leq\PP_G(HN).
+\]
+More precisely, put $L=HN$ and use the map $\phi$ above. Equality holds if
+and only if every $e\in\DD_L$ satisfies the following condition:
+\begin{enumerate}
+\item if $t_L(e)=1$, every $d\in\phi^{-1}(e)$ has $t_H(d)=1$;
+\item if $t_L(e)>1$, the fiber $\phi^{-1}(e)$ consists of exactly one
+double coset $d$, and $t_H(d)=t_L(e)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+For $e\in\DD_L$, its fiber is nonempty. Choose $d_0\in\phi^{-1}(e)$.
+By Lemma~\ref{lem:orbit} and \eqref{eq:weights},
+\begin{equation}\label{eq:fiber}
+ \prod_{d\in\phi^{-1}(e)}a(t_H(d))
+ \leq a(t_H(d_0))\leq a(t_L(e)).
+\end{equation}
+Multiplying over $e$ and applying Lemma~\ref{lem:count} proves the result.
+
+All factors are positive. Therefore equality in the final product holds
+exactly when it holds in every fiber inequality. If $t_L(e)=1$, its target
+factor is $1$, and a product of factors in $(0,1]$ equals $1$ precisely when
+every factor is $1$. By \eqref{eq:weights}, this is condition (1).
+If $t_L(e)>1$, every $d$ in the fiber has $t_H(d)\geq t_L(e)>1$, hence
+every factor is strictly less than $1$. Two or more such factors make the
+first inequality in \eqref{eq:fiber} strict. With a single factor, strict
+decrease of $a$ makes equality equivalent to $t_H(d)=t_L(e)$.
+This proves necessity of (2), and both stated conditions plainly give
+equality in their fibers, proving sufficiency.
+\end{proof}
+
+The criterion describes equality by finite double-coset data, rather than
+by a classification of the groups involved. It has the following structural
+form, completing the equality question following equation (5.1).
+
+\begin{corollary}\label{cor:equality}
+Under the hypotheses of Theorem~\ref{thm:main},
+\[
+ \PP_G(H)=\PP_G(HN)
+ \quad\Longleftrightarrow\quad
+ N\leq H\ \text{or}\ H\trianglelefteq G.
+\]
+Thus every proper normal extension of a nonnormal subgroup strictly
+increases its common transversal probability.
+\end{corollary}
+\begin{proof}
+If $N\leq H$, then $HN=H$. If $H\trianglelefteq G$, then $HN$ is also
+normal, and both probabilities equal $1$ by \eqref{eq:product}.
+Conversely, suppose equality holds and $L=HN>H$. Each $L$-double coset $e$
+is the disjoint union of its $H$-double cosets, so
+\[
+ \sum_{d\in\phi^{-1}(e)}|H|t_H(d)=|L|t_L(e).
+\]
+If $t_L(e)>1$, Theorem~\ref{thm:main} would force a single summand with
+$t_H(d)=t_L(e)$, implying $|H|=|L|$, a contradiction. Hence every $t_L(e)=1$,
+and the same theorem forces every $t_H(d)=1$. This means $HgH=gH$ for every
+$g\in G$, or $g^{-1}Hg\leq H$. Equality of subgroup orders then shows
+$H\trianglelefteq G$.
+\end{proof}
+
+\section{Homomorphisms and nested subgroups}
+\begin{corollary}\label{cor:image}
+For any homomorphism $f:G\to K$ with $G$ finite, and any $H\leq G$,
+\[
+ \PP_G(H)\leq\PP_{f(G)}(f(H)).
+\]
+Equality holds precisely when $\ker f\leq H$ or $H\trianglelefteq G$.
+\end{corollary}
+\begin{proof}
+Put $N=\ker f$ and $L=HN$. We verify the quotient identity used in
+\cite[Theorem 3.15 and equation (5.1)]{ALM}.
+Write $q:G\to G/N$. Since $N\leq L$, $q$ induces bijections on the sets
+of left cosets, right cosets and double cosets for $L$ and $q(L)$.
+In particular, the corresponding double cosets contain the same number
+of left cosets. Formula~\eqref{eq:product} gives
+\[
+ \PP_G(L)=\PP_{G/N}(L/N)=\PP_{f(G)}(f(H)).
+\]
+For the second equality, the isomorphism $G/N\cong f(G)$ identifies
+the coset sets and $f(L)=f(H)$. Apply Theorem~\ref{thm:main}.
+The equality assertion is Corollary~\ref{cor:equality}.
+\end{proof}
+
+Problem 5.7 of \cite{ALM} asks about the two probabilities associated with
+nested subgroups in a fixed ambient group. Theorem~\ref{thm:main} supplies
+an order relation for normal extensions. Containment alone permits either
+direction: in $S_3$, for $U=\langle(12)\rangle$,
+\[
+ \{1\}<U<S_3,\qquad
+ \PP_{S_3}(\{1\})=1,\quad \PP_{S_3}(U)=\tfrac12,\quad
+ \PP_{S_3}(S_3)=1.
+\]
+The endpoint subgroups are normal, so all their double-coset sizes are $1$.
+For $U$, the double cosets are $U$ and $U(13)U$, containing respectively
+$1$ and $2$ left cosets; thus its probability is $a(1)a(2)=1/2$.
+This gives both a decrease and an increase along the same subgroup chain.
+It answers neither a general classification nor any assertion in Problem 5.7
+that containment is monotone: the source makes no such assertion.
+
+\section{Coprime direct products: Problem 5.3}
+Write $\operatorname{tp}(G)=\min_{U\leq G}\PP_G(U)$ for a finite group $G$.
+The source's inequality (4.13) is
+\[
+ \operatorname{tp}(G\times K)\leq
+ \min\{\operatorname{tp}(G)^{|K|},\operatorname{tp}(K)^{|G|}\}.
+\]
+Problem 5.3 asks for equality cases and conjectures equality when
+$\gcd(|G|,|K|)=1$. The following proves that assertion.
+
+\begin{lemma}\label{lem:grid}
+For positive integers $s,t$, $a(st)\geq a(s)^t a(t)^s$. Consequently,
+if $A\leq G$ and $B\leq K$, then
+\begin{equation}\label{eq:rectangular}
+ \PP_{G\times K}(A\times B)\geq
+ \PP_G(A)^{[K:B]}\PP_K(B)^{[G:A]}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+On an $s$ by $t$ grid, let $R$ be the group of permutations preserving each
+row and $C$ the group preserving each column. Then $|R|=(t!)^s$,
+$|C|=(s!)^t$ and $R\cap C=\{1\}$. The map $(r,c)\mapsto rc$ is injective:
+$rc=r'c'$ implies $r'^{-1}r=c'c^{-1}\in R\cap C$. Therefore
+$(t!)^s(s!)^t\leq(st)!$. Dividing by $(st)^{st}$ proves the weight inequality.
+The double cosets for $A\times B$ are exactly the products of a double coset
+for $A$ and one for $B$, with sizes in coset units $st$.
+Multiply the weight inequality over these pairs and use
+$\sum s=[G:A]$ and $\sum t=[K:B]$ to obtain \eqref{eq:rectangular}.
+\end{proof}
+
+\begin{corollary}\label{cor:coprime}
+If $G,K$ are finite and $\gcd(|G|,|K|)=1$, then
+\[
+ \operatorname{tp}(G\times K)=
+ \min\{\operatorname{tp}(G)^{|K|},\operatorname{tp}(K)^{|G|}\}.
+\]
+\end{corollary}
+\begin{proof}
+Every subgroup $S\leq G\times K$ is a product $A\times B$. Indeed, if
+$(g,k)\in S$, coprimality and the Chinese remainder theorem give a power
+equal to $(g,1)$ and a power equal to $(1,k)$; hence $S$ contains the
+two coordinate projections of each of its elements.
+Put $M=\min\{\operatorname{tp}(G)^{|K|},\operatorname{tp}(K)^{|G|}\}$.
+If $A,B$ are nontrivial, Lemma~\ref{lem:grid} gives
+\[
+ \PP_{G\times K}(A\times B)
+ \geq M^{1/|B|+1/|A|}\geq M,
+\]
+since $0<M\leq1$ and $1/|B|+1/|A|\leq1$.
+If $A=1$, the product formula gives
+$\PP_{G\times K}(1\times B)=\PP_K(B)^{|G|}\geq M$;
+the case $B=1$ is symmetric. Thus all subgroups have probability at least $M$.
+Conversely, a minimizing subgroup in $G$ times $1$, or $1$ times a
+minimizing subgroup in $K$, has probability $M$. This proves equality,
+including when one factor is trivial.
+\end{proof}
+
+\section{A finite-quotient setting: Problem 5.4}
+Let $G$ now be any group and $H\leq G$ have finite index. Its core
+$C=\bigcap_{g\in G}gHg^{-1}$ is the kernel of the action on $G/H$ and
+therefore has finite index in $G$. Define
+\begin{equation}\label{eq:finiteindex}
+ \PP^{\mathrm{fin}}_G(H)=\PP_{G/C}(H/C).
+\end{equation}
+This is a rational probability on a finite sample space: choose independently
+and uniformly one element of each left $H/C$-coset in $G/C$, and ask whether
+the resulting transversal is also right-sided. The use of the core quotient
+for finite-index coset geometry already appears in Button, Chiodo and
+Zeron-Medina Laris \cite[p.~1 and Proposition 6]{BCZ}; here it defines the
+numerical probability asked for in Problem 5.4.
+
+\begin{corollary}\label{cor:finiteindex}
+Definition~\eqref{eq:finiteindex} agrees with \eqref{eq:definition} when
+$G$ is finite. It can equivalently use any finite-index normal subgroup
+$U\trianglelefteq G$ contained in $H$, in place of $C$.
+For every $N\trianglelefteq G$ it satisfies
+\[
+ \PP^{\mathrm{fin}}_G(H)\leq\PP^{\mathrm{fin}}_G(HN),
+\]
+with equality precisely when $N\leq H$ or $H\trianglelefteq G$.
+\end{corollary}
+\begin{proof}
+Since $U$ is normal and contained in $H$, we have $U\leq C$.
+Apply the quotient identity in the proof of Corollary~\ref{cor:image} to
+the finite group $G/U$ and its normal subgroup $C/U\leq H/U$.
+It gives $\PP_{G/U}(H/U)=\PP_{G/C}(H/C)$, proving independence and,
+with $U=1$ when $G$ is finite, agreement with \eqref{eq:definition}.
+For the inequality, use the common finite quotient $G/C$ for both $H$ and
+$HN$, and apply Theorem~\ref{thm:main} to $H/C$ and $NC/C$.
+Corollary~\ref{cor:equality} gives equality precisely when
+$NC/C\leq H/C$ or $H/C\trianglelefteq G/C$, equivalently the stated conditions.
+\end{proof}
+This supplies a finite-quotient model, not a uniform distribution on the
+elements of an infinite coset. For example, in the infinite group
+$S_3\times\mathbb Z$, the subgroup
+$\langle(12)\rangle\times\mathbb Z$ has probability $1/2$ in this model.
+
+\section{Coverage and verification}
+The source locators below refer to \cite{ALM}, arXiv v2, pp.~36--37
+(journal version, pp.~1280--1281).
+\begin{center}\small
+\begin{tabular}{@{}p{.19\linewidth}p{.74\linewidth}@{}}
+\toprule
+Source item & Coverage in this note \\
+\midrule
+Problem 5.2 & Answered: yes. Equality iff $N\leq H$ or
+$H\trianglelefteq G$; Theorem~\ref{thm:main} and
+Corollary~\ref{cor:equality}. \\
+Equation (5.1) and its equality question & Proved inequality;
+answered equality question: $\ker f\leq H$ or $H\trianglelefteq G$,
+Corollary~\ref{cor:image}. \\
+Problem 5.3 & Proved: the coprime-order assertion,
+Corollary~\ref{cor:coprime}. General equality classification not covered. \\
+Problem 5.4 & Answered: yes, a finite-quotient setting exists,
+\eqref{eq:finiteindex}. Uniform element-sampling on infinite cosets is
+not asserted. \\
+Problem 5.7 & Partial: normal-extension comparison and the chain
+$1<\langle(12)\rangle<S_3$ with values $1,1/2,1$.
+Unconditional monotonicity is not asserted in the source. \\
+Problems 5.1, 5.5, 5.6, 5.8 & Not covered: realization by groups,
+commuting probabilities, factorial-product uniqueness, and minimizing
+cyclic subgroups. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The pinned Lean declaration
+\nolinkurl{D5.S3.FiniteGroups.TransversalProbabilityMonotone.result}
+proves the universal inequality in Theorem~\ref{thm:main}, with the literal
+subset-counting probability \eqref{eq:definition} and $HN$ expressed as
+the subgroup join $H\sqcup N$. Its source is
+\href{https://github.com/the-omega-institute/trureturing/blob/13f4288c2940bd2aa4020cec789956b9265769f5/D5/S3/FiniteGroups/TransversalProbabilityMonotone.lean}{\nolinkurl{TransversalProbabilityMonotone.lean}}
+at revision \texttt{13f4288c2940bd2aa4020cec789956b9265769f5}.
+The structural equality criterion, homomorphism corollary, direct-product
+results and finite-index extension have the written proofs above;
+they are not additional claims of that declaration.
+The accompanying \texttt{verify.py} checks the
+counting formula by enumerating transversals, the normal-extension
+inequality, the component surjections, the equality criterion and quotient
+identities, the grid-weight inequality and finite direct-product cases
+using exact rational arithmetic on its explicitly listed finite
+groups. The infinite-group statement is a written reduction to finite
+quotients. Those finite checks illustrate the statements; the proofs establish
+their universal scope.
+
+\begin{thebibliography}{9}
+\bibitem{ALM}
+S.~Aivazidis, M.~Loukaki and T.~W.~M\"uller,
+\emph{On the common transversal probability in finite groups},
+arXiv:2209.00986v2 (31 May 2023),
+\url{https://arxiv.org/abs/2209.00986v2}.
+Published as \emph{On the common transversal probability},
+Journal of Group Theory \textbf{27} (2024), no.~6, 1233--1285,
+\href{https://doi.org/10.1515/jgth-2024-0030}{doi:10.1515/jgth-2024-0030}.
+\bibitem{BCZ}
+J.~Button, M.~Chiodo and M.~Zeron-Medina Laris,
+\emph{Coset intersection graphs for groups},
+American Mathematical Monthly \textbf{121} (2014), no.~10, 922--926,
+\href{https://doi.org/10.4169/amer.math.monthly.121.10.922}{doi:10.4169/amer.math.monthly.121.10.922}.
+Author version: \url{https://arxiv.org/abs/1304.6111v1} (2013).
+\end{thebibliography}
+\bigskip
+\noindent\small\textcopyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\end{document}
